@@ -7,6 +7,16 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         try {
+            // Print a list of supported operations
+            System.out.println("Supported Operations:");
+            System.out.println("------------------------------------------------");
+            System.out.println("Addition     (+)");
+            System.out.println("Subtraction  (-)");
+            System.out.println("Multiplication(*)");
+            System.out.println("Division     (/)");
+            System.out.println("Modulo       (%)");
+            System.out.println("------------------------------------------------");
+
             // Read the first number from the user
             System.out.print("Please enter your first number: ");
             double num1 = Double.parseDouble(scanner.nextLine());
@@ -40,6 +50,15 @@ public class Calculator {
                         System.out.println("Error: Division by zero.");
                     } else {
                         System.out.println("The result is " + (num1 / num2));
+                    }
+                    break;
+                // Modulo
+                case "%":
+                    // Check if the divisor is zero
+                    if (num2 == 0) {
+                        System.out.println("Error: Division by zero.");
+                    } else {
+                        System.out.println("The result is " + (num1 % num2));
                     }
                     break;
                 // Invalid operation
